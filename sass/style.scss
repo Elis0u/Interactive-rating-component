@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+html{
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+}
+
+body{
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        background: var(--DarkBlue);
+        width: 50%;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: var(--White);
+        img{
+            background-color: hsl(213, 20%, 22%);
+            border-radius: 50%;
+            padding: 1rem;
+        }
+        h1{
+            padding: 1rem 0;
+            font-weight: 700;
+        }
+        p{
+            font-size: 15px;
+            color: var(--LightGrey);
+            line-height: 1.5rem;
+        }
+        .notes{
+            padding: 1rem 0;
+            ul{
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                li{
+                    .btn{
+                        border: none;
+                        border-radius: 50%;
+                        width: 3rem;
+                        height: 3rem;
+                        background-color: hsl(213, 20%, 22%);
+                        color: var(--White);
+                    }
+                    .btn:hover{
+                        background-color: var(--MediumGrey);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .btn-submit{
+            width: 100%;
+            color: var(--White);
+            border: none;
+            border-radius: 20rem;
+            background-color: var(--Orange);
+            height: 3rem;
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            font-weight: 700;
+        }
+        .btn-submit:hover{
+            background-color: var(--White);
+            color: var(--Orange);
+            cursor: pointer;
+            // transition: all 0.4s ease-in;
+        }
+    }
+    .card-thanks{
+        background: var(--DarkBlue);
+        width: 50%;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: var(--White);
+        text-align: center;
+        .result{
+            color: var(--Orange);
+            background-color: hsl(213, 20%, 22%);
+            border: none;
+            border-radius: 20rem;
+            padding: .5rem;
+            margin: 1.5rem 0;
+        }
+        p{
+            font-size: 15px;
+            color: var(--LightGrey);
+            line-height: 1.5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+}
+
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 2%;
+
+    a{ 
+        color: hsl(228, 45%, 44%); 
+        text-decoration: none;
+    }
+}
